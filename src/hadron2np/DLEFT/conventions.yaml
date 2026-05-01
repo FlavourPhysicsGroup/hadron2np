@@ -1,0 +1,75 @@
+# DLEFT Wilson Coefficients
+# 1st: name, 2nd: dimension
+wcs in S/P basis:
+  # scalar section: 8
+  - ["L_S_dphi", 4]
+  - ["L_P_dphi", 4]
+  - ["L_V_dphi", 5]
+  - ["L_A_dphi", 5]
+  - ["L_S_dphi2", 5]
+  - ["L_P_dphi2", 5]
+  - ["L_V_dphi2", 6]
+  - ["L_A_dphi2", 6]
+
+  # fermion section: 6
+  - ["L_S_dchi2", 6]
+  - ["L_P_dchi2", 6]
+  - ["L_V_dchi2", 6]
+  - ["L_A_dchi2", 6]
+  - ["L_T_dchi2", 6]
+  - ["L_T5_dchi2", 6]
+
+  # vector section: 14
+  - ["L_V_dX", 4]
+  - ["L_A_dX", 4]
+  - ["L_T_dX", 5]
+  - ["L_T5_dX", 5]
+
+  - ["L_S_dXX", 5]
+  - ["L_P_dXX", 5]
+  - ["L_V_dXX", 6]
+  - ["L_A_dXX", 6]
+  - ["L_V_dXtX", 6]
+  - ["L_A_dXtX", 6]
+  - ["L_T_dXX", 5]
+  - ["L_T5_dXX", 5]
+  - ["L_DV_dXX", 6]
+  - ["L_DA_dXX", 6]
+
+wcs in L/R basis:
+  # scalar section: 6
+  - ["L_SR_dphi", 4]
+  - ["L_VR_dphi", 5]
+  - ["L_VL_dphi", 5]
+  - ["L_SR_dphi2", 5]
+  - ["L_VR_dphi2", 6]
+  - ["L_VL_dphi2", 6]
+
+  # fermion section: 5
+  - ["L_SL_dchi2", 6]
+  - ["L_SR_dchi2", 6]
+  - ["L_VL_dchi2", 6]
+  - ["L_VR_dchi2", 6]
+  - ["L_TR_dchi2", 6]
+
+  # vector section: 11
+  - ["L_VR_dX", 4]
+  - ["L_VL_dX", 4]
+  - ["L_TR_dX", 5]
+
+  - ["L_SR_dXX", 5]
+  - ["L_VR_dXX", 6]
+  - ["L_VL_dXX", 6]
+  - ["L_VR_dXtX", 6]
+  - ["L_VL_dXtX", 6]
+  - ["L_TR_dXX", 5]
+  - ["L_DVR_dXX", 6]
+  - ["L_DVL_dXX", 6]
+
+DSMEFT wc names:
+  - C_dphi
+  - C_dphi2
+
+dark matter mass: 
+  m_dm_1: 0
+  m_dm_2: 0

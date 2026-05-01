@@ -1,0 +1,168 @@
+parameters:
+  # Coupling constants
+
+  GF:
+    tex: $G_F$
+    description: Fermi constant
+  alpha_e:
+    tex: $\alpha_e(m_Z)$
+    description: electromagnetic fine structure constant in the $\overline{\text{MS}}$ scheme at the scale $m_Z$
+  alpha_s:
+    tex: $\alpha_s(m_Z)$
+    description: strong coupling constant in the $\overline{\text{MS}}$ scheme at the scale $m_Z$
+  s2w:
+    tex: $\sin^2 \hat\theta_w(m_Z)$
+    description: sine squared of the weak mixing angle in the $\overline{\text{MS}}$ scheme at the scale $m_Z$
+
+
+  # CKM parameters
+
+  Vus:
+    tex: $V_{us}$
+    description: CKM element $V_{us}$
+  Vub:
+    tex: $\vert V_{ub}\vert$
+    description: Absolute value of the CKM element $V_{ub}$
+  Vcb:
+    tex: $V_{cb}$
+    description: CKM element $V_{cb}$
+  delta:
+    tex: $\delta$
+    description: CKM phase $\delta$ in radians
+
+
+  # Quark masses
+
+  m_u:
+    tex: $m_{u}(2\,\text{GeV})$
+    description: $u$ quark mass in the $\overline{\text{MS}}$ scheme at 2 GeV
+  m_d:
+    tex: $m_{d}(2\,\text{GeV})$
+    description: $d$ quark mass in the $\overline{\text{MS}}$ scheme at 2 GeV
+  m_s:
+    tex: $m_{s}(2\,\text{GeV})$
+    description: $s$ quark mass in the $\overline{\text{MS}}$ scheme at 2 GeV
+  m_c:
+    tex: $m_{c}(m_{c})$
+    description: $c$ quark mass in the $\overline{\text{MS}}$ scheme at the scale $m_c$
+  m_b:
+    tex: $m_{b}(m_{b})$
+    description: $b$ quark mass in the $\overline{\text{MS}}$ scheme at the scale $m_b$
+
+
+  # Meson decay constants
+
+  f_K+:
+    tex: $f_{K^\pm}$
+    description: Charged kaon decay constant
+  f_K0:
+    tex: $f_{K^0}$
+    description: Neutral kaon decay constant
+  f_pi+:
+    tex: $f_{\pi^\pm}$
+    description: Charged pion decay constant
+  f_pi0:
+    tex: $f_{\pi^0}$
+    description: Neutral pion decay constant
+  f_Bs:
+    tex: $f_{B_s}$
+    description: $B_s$ decay constant
+  f_B0:
+    tex: $f_{B^0}$
+    description: $B^0$ decay constant
+  f_B+:
+    tex: $f_{B^\pm}$
+    description: $B^\pm$ decay constant
+  f_Bc:
+    tex: $f_{B_c}$
+    description: $B_c$ decay constant
+  f_D0:
+    tex: $f_{D^0}$
+    description: $D^0$ decay constant
+  f_D+:
+    tex: $f_{D^\pm}$
+    description: $D^\pm$ decay constant
+  f_Ds:
+    tex: $f_{D_s}$
+    description: $D_s$ decay constant
+  f_rho0:
+    tex: $f_{\rho^0}$
+    description: $\rho^0$ decay constant
+  f_omega:
+    tex: $f_{\omega}$
+    description: $\omega$ decay constant
+  f_K*0:
+    tex: $f_{K^{*0}}$
+    description: $K^{*0}$ decay constant
+  f_K*+:
+    tex: $f_{K^{*\pm}}$
+    description: $K^{*\pm}$ decay constant
+  f_phi:
+    tex: $f_{\phi}$
+    description: $\phi$ decay constant
+
+  B->pi form factor f+:
+    tex: $f_+^{B\pi}$
+    description: $B\to \pi$ vector current form factor $f_+$
+  B->pi form factor f0:
+    tex: $f_+^{B\pi}$
+    description: $B\to \pi$ scalar current form factor $f_0$
+  B->pi form factor fT:
+    tex: $f_+^{B\pi}$
+    description: $B\to \pi$ tensor current form factor $f_T$
+  B->K form factor f+:
+    tex: $f_+^{BK}$
+    description: $B\to K$ vector current form factor $f_+$
+  B->K form factor f0:
+    tex: $f_+^{BK}$
+    description: $B\to K$ scalar current form factor $f_0$
+  B->K form factor fT:
+    tex: $f_+^{BK}$
+    description: $B\to K$ tensor current form factor $f_T$
+  B->eta form factor f+:
+    tex: $f_+^{B\eta}$
+    description: $B\to \eta$ vector current form factor $f_+$
+  B->eta form factor f0:
+    tex: $f_+^{B\eta}$
+    description: $B\to \eta$ scalar current form factor $f_0$
+  B->eta form factor fT:
+    tex: $f_+^{B\eta}$
+    description: $B\to \eta$ tensor current form factor $f_T$
+
+parameter_groups:
+  # B->轻介子 形状因子
+  B->pi form factors:
+    description: $B\to \pi$ form factors
+    members: [f+, f0, fT]
+  B->K form factors:
+    description: $B\to K$ form factors
+    members: [f+, f0, fT]
+  B->eta form factors:
+    description: $B\to \rho$ form factors
+    members: [f+, f0, fT]
+
+  B->rho form factors:
+    description: $B\to \rho$ form factors
+    members: [V, A0, A1, A2, T1, T2, T3]
+  Bs->K* form factors:
+    description: $B_s\to K^*$ form factors
+    members: [V, A0, A1, A2, T1, T2, T3]
+  B->K* form factors:
+    description: $B\to K^*$ form factors
+    members: [V, A0, A1, A2, T1, T2, T3]
+  B->omega form factors:
+    description: $B\to \omega$ form factors
+    members: [V, A0, A1, A2, T1, T2, T3]
+  Bs->phi form factors:
+    description: $B_s\to \phi$ form factors
+    members: [V, A0, A1, A2, T1, T2, T3]
+
+  # K->pi 形状因子
+  K->pi form factors:
+    description: $K\to \pi$ form factors
+    members: [f+, f0, fT]
+  
+  # Lambda_b->Lambda 形状因子
+  Lambdab->Lambda form factors:
+    description: $\Lambda_b \to \Lambda$ form factors
+    members: [f0, f+, fp, g0, g+, gp, h+, hp, h~+, h~p]

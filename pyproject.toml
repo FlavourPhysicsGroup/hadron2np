@@ -1,0 +1,54 @@
+[project]
+name = "hadron2np"
+version = "0.0.1"
+description = "A computational framework for calculating Hadron decays into dark matter candidates"
+readme = "README.md"
+authors = [
+    { name = "Biao-Feng Hou", email = "houbiaofeng@htu.edu.cn" },
+    { name = "Xing-Bo Yuan", email = "y@ccnu.edu.cn"}
+]
+maintainers = [
+  {name = "Biao-Feng Hou", email = "houbiaofeng@htu.edu.cn"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "flavio>=2.7.0",
+    "hepunits>=2.4.5",
+    "matplotlib>=3.10.9",
+    "particle>=0.26.2",
+    "pyyaml>=6.0.3",
+    "scipy>=1.17.1",
+    "wilson>=2.5.2",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+keywords = ["hadron decay", "new physics"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Programming Language :: Python",
+]
+
+[project.urls]
+Homepage = "https://gitee.com/flaour-physics-group"
+# Documentation = ""
+Repository = "https://gitee.com/flaour-physics-group"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "pip>=26.1",
+    "pytest>=9.0.3",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.ruff.format]
+quote-style = "preserve"

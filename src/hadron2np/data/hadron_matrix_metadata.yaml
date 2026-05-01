@@ -1,0 +1,27 @@
+# processName: [fcnc_quark, tex_symbol, class]
+
+# class: ['B->0', 'B->P', 'B->V', 'K->0', 'K->P', 'Lambdab->Lambda', 'Upsilon->0', 'Jpsi->0']
+
+# quark level: b->s
+Bs->0: ['b->s', 'B_s \to ', 'B->0']
+B+->K+: ['b->s', 'B^+ \to K^+', 'B->P']
+B0->K0: ['b->s', 'B^0 \to K^0', 'B->P']
+B+->K*+: ['b->s', 'B^+ \to K^{*+}', 'B->V']
+B0->K*0: ['b->s', 'B^0 \to K^{*0}', 'B->V']
+Lambdab->Lambda: ['b->s', '\Lambda_b\to \Lambda', 'Lambdab->Lambda']
+
+# quark level: b->d
+B0->0: ['b->d', 'B_0 \to ', 'B->0']
+B+->pi+: ['b->d', 'B^+ \to \pi^+', 'B->P']
+B0->pi0: ['b->d', 'B^0 \to \pi^0', 'B->P']
+B+->rho+: ['b->d', 'B^+ \to \rho^+', 'B->V']
+B0->rho0: ['b->d', 'B^0 \to \rho^0', 'B->V']
+
+# quark level: s->d
+KL->0: ['s->d', 'K_L\to ', 'K->0']
+K+->pi+: ['s->d', 'K^+\to \pi^+', 'K->P']
+KL->pi0: ['s->d', 'K_L\to \pi^0', 'K->P']
+
+# quark level: b->b, c->c
+Upsilon->0: ['b->b', '\Upsilon \to ', 'Upsilon->0']
+Jpsi->0: ['c->c', 'J/\psi \to ', 'Jpsi->0']

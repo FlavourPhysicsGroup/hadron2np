@@ -1,0 +1,55 @@
+# 为去除flavio依赖, 将用到的介子参数从particle中读取
+
+# 夸克名: pdgid
+d: 1
+u: 2
+s: 3
+c: 4
+b: 5
+t: 6
+
+e: 11
+mu: 13
+tau: 15
+
+g: 21
+gamma: 22
+Z: 23
+W: 24
+h: 25
+
+# 介子名: pdgid
+pi0: 111
+pi+: 211
+rho0: 113
+rho+: 213
+
+eta: 221
+omega: 223
+phi: 333
+
+K0: 311
+K+: 321
+KL: 130
+KS: 310
+K*0: 313
+K*+: 323
+
+D0: 421
+D+: 411
+
+B0: 511
+B+: 521
+Bs: 531
+Bc: 541
+B*0: 513
+B*+: 523
+
+etac: 441
+J/psi: 443
+
+Lambdab: 5122
+Lambda: 3122
+
+Upsilon(1S): 553
+Upsilon(2S): 100553

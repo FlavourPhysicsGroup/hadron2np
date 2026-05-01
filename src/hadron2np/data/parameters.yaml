@@ -1,0 +1,38 @@
+
+# Coupling constants
+
+GF: 1.1663787e-5
+alpha_e: 0.00781616
+alpha_s: 0.1182
+s2w: 0.23129
+
+
+# CKM parameters
+
+Vus: 0.2248(8)   # FLAG 2017 Nf=2+1+1
+Vub: 3.73(14)e-3  # FLAG 2017 Nf=2+1 B->pilnu
+Vcb: 4.221(78)e-2
+delta: 1.27(12)  # delta = gamma to excellent approximation
+
+
+# Meson decay constants
+
+f_rho0: 0.212(4)  # 1501.06569 table 1
+f_omega: 0.185(5)  # 1501.06569 table 1
+f_phi: 0.231(5)  # 1501.06569 table 1
+f_Bc: 0.434(15) # 1503.05762v2 eq. (20)
+f_Bs: 0.2303        # FLAG 2019 Nf=2+1+1
+f_B0: 0.1920        # I don't consider the correlation between these 3 decay constant
+f_B+: 0.1880        # 
+
+f_K+: 0.1554        # reproduce f_K/f_pi=1.1932(21) from FLAG 2021 Nf=2+1+1
+f_K0: 0.1554
+
+f_J/psi: 0.4033          # 1505.03870 table 2
+fT_J/psi: 0.367003
+f_Upsilon(1S): 0.6844    # 1505.03870 table 2
+fT_Upsilon(1S): 0.745996
+# f_J/psi: 0.4104        # 2005.01845 abstract
+# f_Upsilon(1S): 0.6772  # Eq. (29) in 2101.08103
+f_Upsilon(2S): 0.481(39)  # Eq. (24) in 1408.5768
+f_Upsilon(3S): 0.395(25)  # using Eq.(5.45c) in 2007.01737, consistent with hep-ph/0603164 (0.388)
