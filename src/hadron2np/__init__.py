@@ -37,4 +37,4 @@ def new_decay_process(particles: list, basis='DLEFT(L/R)') -> DecayProcessBase:
             return ThreeBodyDecayProcess(particles, basis)
 
 
-__all__ = [new_decay_process]
+__all__ = ['new_decay_process', 'parameters', 'parameter_groups', 'parameters_dict', 'config']
