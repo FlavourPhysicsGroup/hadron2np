@@ -12,6 +12,10 @@ from .DLEFT_B_V_3_1_1_1 import amp_square_3_1_1 as amp_square_B_V_3_1_1_1
 from .DLEFT_B_V_3_1_1_2 import amp_square_3_1_1 as amp_square_B_V_3_1_1_2
 from .DLEFT_B_V_3_1_1_3 import amp_square_3_1_1 as amp_square_B_V_3_1_1_3
 
+from .DLEFT_Lb_L_3_1_1_1 import amp_square_3_1_1 as amp_square_Lb_L_3_1_1_1
+from .DLEFT_Lb_L_3_1_1_2 import amp_square_3_1_1 as amp_square_Lb_L_3_1_1_2
+from .DLEFT_Lb_L_3_1_1_3 import amp_square_3_1_1 as amp_square_Lb_L_3_1_1_3
+
 from hadron2np import Phase_space_factors as ps
 import numpy as np
 from hmff.classes import Impl
@@ -26,6 +30,9 @@ AMP_SQUARE_MAP = {
     ('B->V', 1): amp_square_B_V_3_1_1_1,
     ('B->V', 2): amp_square_B_V_3_1_1_2,
     ('B->V', 3): amp_square_B_V_3_1_1_3,
+    ('Lambdab->Lambda', 1): amp_square_Lb_L_3_1_1_1,
+    ('Lambdab->Lambda', 2): amp_square_Lb_L_3_1_1_2,
+    ('Lambdab->Lambda', 3): amp_square_Lb_L_3_1_1_3,
 }
 
 

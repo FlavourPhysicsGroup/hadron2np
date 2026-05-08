@@ -5,6 +5,7 @@ from .DLEFT_B_P_2_1_1 import amp_square_2_1_1 as amp_square_B_P_2_1_1
 from .DLEFT_B_P_3_1_1 import amp_square_3_1_1 as amp_square_B_P_3_1_1
 from .DLEFT_B_V_2_1_1 import amp_square_2_1_1 as amp_square_B_V_2_1_1
 from .DLEFT_B_V_3_1_1 import amp_square_3_1_1 as amp_square_B_V_3_1_1
+from .DLEFT_Lb_L_3_1_1 import amp_square_3_1_1 as amp_square_Lb_L_3_1_1
 
 from hadron2np import Phase_space_factors as ps
 import numpy as np
@@ -112,8 +113,8 @@ def partial_width_3_1_1(
             amp_square = amp_square_B_V_3_1_1
         # case 'K->P':
         #     amp_square = amp_square_K_P_3_1_1
-        # case 'Lambdab->Lambda':
-        #     amp_square = amp_square_Lb_L_3_1_1
+        case 'Lambdab->Lambda':
+            amp_square = amp_square_Lb_L_3_1_1
         case _:
             raise NotImplementedError(f'Decay process not implementd yet: {fcnc_hadron}')
     f_phase_space = ps.three_body_phase_space_factor(m_IS, m_dm_1, m_dm_2, m_FS, np.sqrt(qsq))

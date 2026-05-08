@@ -4,13 +4,8 @@ from .init_parameters import parameter_groups
 from .init_parameters import parameters_dict
 from .DecayProcess import TwoBodyDecayProcess, ThreeBodyDecayProcess, DecayProcessBase
 
-all_decay_processes = [
-    'Lambdab->Lambda+phi', 'Lambdab->Lambda+phiphi', 'Lambdab->Lambda+X', 'Lambdab->Lambda+XX',
-    'Lambdab->Lambda+chichi'
-]
 
-
-def todo_decay_processes():
+def all_decay_processes():
     all_processes = []
     for fcnc_hadron in config['hadron matrix element']:
         IS_name, FS_name = fcnc_hadron.split('->')
