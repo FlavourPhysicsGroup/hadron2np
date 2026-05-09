@@ -249,7 +249,7 @@ dev = [
 requires-dist = [
     { name = "flavio", specifier = ">=2.7.0" },
     { name = "hepunits", specifier = ">=2.4.5" },
-    { name = "hmff", editable = "../../../Documents/Academic-GitRepo/form-factor" },
+    { name = "hmff", editable = "../form-factor" },
     { name = "matplotlib", specifier = ">=3.10.9" },
     { name = "particle", specifier = ">=0.26.2" },
     { name = "pyyaml", specifier = ">=6.0.3" },
@@ -276,7 +276,7 @@ wheels = [
 [[package]]
 name = "hmff"
 version = "0.1.0"
-source = { editable = "../../../Documents/Academic-GitRepo/form-factor" }
+source = { editable = "../form-factor" }
 dependencies = [
     { name = "numpy" },
     { name = "pyyaml" },
