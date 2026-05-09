@@ -22,7 +22,7 @@ def amp_square_3_1_1(
     FFA0 = ffs["A0"]
     FFA1 = ffs["A1"]
     FFA2 = ffs["A2"]
-    FFA3 = ffs["A3"]
+    FFA3 = (m_IS + m_FS) / (2 * m_FS) * FFA1 - (m_IS - m_FS) / (2 * m_FS) * FFA2
     FFT1 = ffs["T1"]
     FFT2 = ffs["T2"]
     FFT3 = ffs["T3"]
