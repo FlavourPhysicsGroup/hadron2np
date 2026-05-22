@@ -42,6 +42,7 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "hadron2np",
     "ipykernel>=7.2.0",
     "pip>=26.1",
     "pytest>=9.0.3",
@@ -53,6 +54,12 @@ default = true
 
 [tool.uv.sources]
 hmff = { path = "../form-factor", editable = true }
+hadron2np = { workspace = true, editable = true }
+
+[tool.uv.workspace]
+members = [
+    ".",
+]
 
 [tool.ruff.format]
 quote-style = "preserve"
