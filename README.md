@@ -35,14 +35,19 @@ Hadron2NP 用于计算重味强子（B 介子、K 介子、$\Lambda_b$ 重子等
 - [uv](https://docs.astral.sh/uv/)（推荐的 Python 包管理器）
 
 ### 从源码安装
+在一个空目录 `workspace/` 下，克隆 `form-factor` 和 `hadron2np` 两个仓库。
+然后使用 uv 新建一个项目目录。相应的终端命令如下：
 
 ```bash
+cd workspace
+git clone https://gitee.com/flaour-physics-group/form-factor.git
 git clone https://gitee.com/flaour-physics-group/hadron2np.git
-cd hadron2np
-uv pip install -e .
+
+uv init my-new-project && cd my-new-project
+uv add ../form-factor
+uv add ../hadron2np
 ```
 
-> 项目依赖 [hmff](https://gitee.com/flaour-physics-group) 形状因子库，请确保该依赖可被正确解析。
 
 ### 从 PyPI 安装（即将支持）
 
@@ -53,16 +58,12 @@ uv pip install hadron2np
 ## 快速上手
 
 ### 基本使用
-
+在 `workspace/my-new-project/` 目录下，新建一个 python 脚本，将以下内容写入后运行。
 ```python
 import hadron2np
 import numpy as np
 
-# 查看当前支持的所有衰变过程
-print(hadron2np.all_decay_processes)
-
-# 查看规划中的衰变过程
-hadron2np.todo_decay_processes()
+print(hadron2np.parameters_dict)
 ```
 
 ### 计算衰变宽度与分支比
