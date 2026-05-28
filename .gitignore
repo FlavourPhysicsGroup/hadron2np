@@ -419,3 +419,5 @@ $RECYCLE.BIN/
 
 tests/*
 !tests/test_hadron2np.ipynb
+!tests/test_B_decay_process.py
+!tests/test_LambdaB_decay_process.py
