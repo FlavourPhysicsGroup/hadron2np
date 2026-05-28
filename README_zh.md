@@ -42,8 +42,8 @@ Hadron2NP 用于计算重味强子（B 介子、K 介子、$\Lambda_b$ 重子等
 
 ```bash
 cd workspace
-git clone https://github.com/FlaourPhysicsGroup/form-factor.git
-git clone https://github.com/FlaourPhysicsGroup/hadron2np.git
+git clone https://github.com/FlavourPhysicsGroup/form-factor.git
+git clone https://github.com/FlavourPhysicsGroup/hadron2np.git
 
 uv init my-new-project && cd my-new-project
 uv add ../form-factor
