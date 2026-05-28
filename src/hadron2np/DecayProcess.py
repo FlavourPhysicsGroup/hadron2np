@@ -24,7 +24,7 @@ class DecayProcessBase():
         self.IS = particles[0]
         self.FS = particles[1]
         self.dms = particles[2:]
-        self.dm_name = particles[2]
+        self.dm_name = 'chi' if 'chi' in particles[2] else particles[2]
         self.dm_mode = DM_MODES.get(tuple(particles[2:]), 0)
         
         self.particles = particles
