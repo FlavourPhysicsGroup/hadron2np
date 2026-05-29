@@ -168,5 +168,5 @@ If this project is helpful for your research, please consider citing the relevan
 
 ## Links
 
-- Project page: <https://gitee.com/flaour-physics-group/hadron2np>
-- Issue tracker: <https://gitee.com/flaour-physics-group/hadron2np/issues>
+- Project page: <https://github.com/FlavourPhysicsGroup/hadron2np>
+- Issue tracker: <https://github.com/FlavourPhysicsGroup/hadron2np/issues>
