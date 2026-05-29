@@ -6,7 +6,7 @@ from hepunits import units as u
 import hadron2np
 
 from .classes import Parameter, ParameterGroup, Implementation
-from .FormFactor import bv_pole_0406232, bv_pole_0412079, bpi_bcl_1103, Lambda_b2Lambda
+# from .FormFactor import bv_pole_0406232, bv_pole_0412079, bpi_bcl_1103, Lambda_b2Lambda
 
 # 全局变量, 最后在fdm.__init__.py文件中交给fdm来直接管理
 parameters = {}
@@ -57,37 +57,37 @@ with open((Path(__file__).parent / 'data/parameters.yaml').absolute(), 'r') as f
 
 
 # ############ BEGIN: 为B介子衰变过程的FormFactors添加Implementation #############
-def ff_function(function, process):
-    # 加一次函数变换, 为了统一 Implementation.get_values() 方法的参数前两个永远是wc, par
-    return lambda wc_obj, par_dict, q2: function(process, q2)
+# def ff_function(function, process):
+#     # 加一次函数变换, 为了统一 Implementation.get_values() 方法的参数前两个永远是wc, par
+#     return lambda wc_obj, par_dict, q2: function(process, q2)
 
 
-_processes = {'b_p': ['B->pi', 'B->K', 'B->eta'],
-              'b_v': ['B->rho', 'Bs->K*', 'B->K*', 'B->omega', 'Bs->phi'],
-              'Lambda_b_Lambda': ['Lambda_b->Lambda']}
-for _k, _ps in _processes.items():
-    for _p in _ps:
-        q_name = _p + ' form factors'
-        q: Parameter = parameter_groups[q_name]
-        if _k == 'b_p':
-            imp = Implementation(name='one-pole', quantity=q_name,
-                                 function=ff_function(function=bv_pole_0406232.ff, process=_p),
-                                 arguments=['q2', ])
-            q.add_implementation(imp)
-        elif _k == 'b_v':
-            imp = Implementation(name='one-pole', quantity=q_name,
-                                 function=ff_function(function=bv_pole_0412079.ff, process=_p),
-                                 arguments=['q2', ])
-            q.add_implementation(imp)
-        elif _k == 'Lambda_b_Lambda':
-            imp = Implementation(name='default', quantity=q_name,
-                                 function=lambda wc, par, q2: Lambda_b2Lambda.ffs_two_order(q2),
-                                 arguments=['q2', ])
-            q.add_implementation(imp)
+# _processes = {'b_p': ['B->pi', 'B->K', 'B->eta'],
+#               'b_v': ['B->rho', 'Bs->K*', 'B->K*', 'B->omega', 'Bs->phi'],
+#               'Lambda_b_Lambda': ['Lambda_b->Lambda']}
+# for _k, _ps in _processes.items():
+#     for _p in _ps:
+#         q_name = _p + ' form factors'
+#         q: Parameter = parameter_groups[q_name]
+#         if _k == 'b_p':
+#             imp = Implementation(name='one-pole', quantity=q_name,
+#                                  function=ff_function(function=bv_pole_0406232.ff, process=_p),
+#                                  arguments=['q2', ])
+#             q.add_implementation(imp)
+#         elif _k == 'b_v':
+#             imp = Implementation(name='one-pole', quantity=q_name,
+#                                  function=ff_function(function=bv_pole_0412079.ff, process=_p),
+#                                  arguments=['q2', ])
+#             q.add_implementation(imp)
+#         elif _k == 'Lambda_b_Lambda':
+#             imp = Implementation(name='default', quantity=q_name,
+#                                  function=lambda wc, par, q2: Lambda_b2Lambda.ffs_two_order(q2),
+#                                  arguments=['q2', ])
+#             q.add_implementation(imp)
 
-imp = Implementation('bcl', 'B->pi form factors',
-                     lambda wc, par, q2: bpi_bcl_1103.ff(q2), arguments=['q2', ])
-parameter_groups['B->pi form factors'].add_implementation(imp)
+# imp = Implementation('bcl', 'B->pi form factors',
+#                      lambda wc, par, q2: bpi_bcl_1103.ff(q2), arguments=['q2', ])
+# parameter_groups['B->pi form factors'].add_implementation(imp)
 
 
 # ############ END: 为B介子衰变过程的FormFactors添加Implementation #############
